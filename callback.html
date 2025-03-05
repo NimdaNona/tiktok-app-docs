@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>OAuth redirect handled by Make.com.</p>
+    <script>
+      // Optional: Extract the "code" from the URL (e.g., ?code=XYZ)
+      const code = new URLSearchParams(window.location.search).get('code');
+      // Forward to Make.com webhook (optional)
+      if (code) window.location.href = `https://hook.make.com/?code=${code}`;
+    </script>
+  </body>
+</html>
